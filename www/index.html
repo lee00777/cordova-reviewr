@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" 
+    content="default-src 'self' data: gap: https://*.googleapis.com/ https://*.fontawesome.com/ https://*.gstatic.com 'unsafe-eval'; 
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://*.fontawesome.com/; 
+    media-src *; 
+    img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <title>ReviewR</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <section class="page active" id="home">
+      <header>
+        <h1>GY's Reviewr</h1>
+      </header>
+      <main>
+        <h2></h2>
+        <div class="content"></div>
+        <div id="btn_parent" class="btnAdd" data-target="takePic"><i class="fas fa-plus-circle"></i></div>
+      </main>
+    </section>
+    <section class="page review" id="reviews">
+      <header>
+        <h1>GY's Reviewr</h1>
+      </header>
+      <main>
+        <div class="one-review">
+          <figure>
+            <img src="" alt="" id="review_img" />
+            <figcaption id="review_title">Title here</figcaption>
+          </figure>
+          <div class="review_wrapper">
+            <div id="btn_date">
+              <p id="review_date">
+                <div id="btnDelete" data-target="home"><i class="fas fa-trash-alt"></i></div> 
+              </p>
+            </div>
+            <div class="review_stars">
+              <span class="review_star"></span>
+              <span class="review_star"></span>
+              <span class="review_star"></span>
+              <span class="review_star"></span>
+              <span class="review_star"></span>
+            </div>
+            <div id="btndetail_parent">
+              <button id="btnDetailsBack" data-target="home">Back</button>    
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="page" id="takePic">
+      <header>
+        <h1>GY's Reviewr</h1>
+      </header>
+      <main>
+        <form>
+          <div class="photo-content">
+            <p id="img_parent"><img src="" alt="" id="imgAdd" /></p>
+            <label for="title">Title</label>
+            <input type="text" id="title"/>
+            <div class="stars" data-ratings ="4"> Rating
+              <span class="star"> &nbsp;</span>
+              <span class="star"> &nbsp;</span>
+              <span class="star"> &nbsp;</span>
+              <span class="star"> &nbsp;</span>
+              <span class="star"> &nbsp;</span>
+            </div>
+            <div class="takePic_btn">
+              <button id="btnAddBack" data-target="home">Back</button>
+              <button id="btnSave" data-target="home">Save</button>
+            </div>            
+          </div>
+        </form>  
+      </main>
+    </section>  
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script> 
+</body>
+</html>
